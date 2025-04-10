@@ -12,6 +12,10 @@ public class LoginController {
 
     private LogInProcessor loginProcessor;
 
+    public LoginController(LogInProcessor loginProcessor) {
+        this.loginProcessor = loginProcessor;
+    }
+
     @GetMapping("/")
     public String loginGet() {
         return "login.html";
